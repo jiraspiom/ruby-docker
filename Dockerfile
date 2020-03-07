@@ -5,8 +5,8 @@ RUN mkdir /meuApp
 
 WORKDIR /meuApp
 
-ADD Gemfile /meuApp/Gemfile
-ADD Gemfile.lock /meuApp/Gemfile.lock
+COPY Gemfile /meuApp/Gemfile
+COPY Gemfile.lock /meuApp/Gemfile.lock
 
 RUN bundle install
-ADD . /meuApp
+COPY . /meuApp
